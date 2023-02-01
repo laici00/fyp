@@ -1,0 +1,122 @@
+
+<html>
+    <head>
+
+        <title>Laman Web Pengurusan Masjid</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <style>
+           
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                margin-left: 70px;
+                font-size: 100px;
+                display: flex;
+            }
+
+            h3 {
+                font-family: 'Roboto', sans-serif;
+                margin-left: 80px;
+                font-size: 55px;
+                display:flex;
+                margin-top: 0px;
+
+            }
+            
+            #kembali {
+                background-color: black;
+                color: white;
+            }
+            
+            #daftar {
+                margin-left: -135px;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <script>
+            document.getElementById("date").innerHTML = Date();
+        </script>
+
+        <ul>
+             <li><a href="index.html" title="Kembali ke Laman Utama!" ><span id="left" class="material-symbols-outlined">navigate_before</span></a></li>
+            
+        </ul>
+
+        <h4>Sistem Pengurusan Masjid</h4>
+
+        <style>
+            
+            .rectangle {
+                position: absolute;
+                border-radius: 20px;
+                height: 500px;
+                width: 750px;
+                background-color: #1260cc;
+
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+
+                margin-top: -350px;
+
+                z-index:-999;
+
+
+            }
+
+           
+        </style>
+
+    <center>
+        <h2>Masukkan Maklumat Akaun</h2>
+
+
+        <form method="post" action="register.jsp">
+            <table>
+                
+                <tr>
+                    <td> <label>Masukkan Emel: </label> </td>
+                    <td> <input type="text" id="emel" name="emel" placeholder="emel" > </td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                </tr>
+                
+                <tr>
+                    <td> <label>Masukkan Nama: </label> </td>
+                    <td> <input type="text" id="nama" name="nama" placeholder="nama"> </td>
+                </tr>
+
+                <tr>
+                    <td> <label>Masukkan Kata Laluan: </label> </td>
+                    <td> <input type="password" id="kataLaluan" name="kataLaluan" placeholder="Kata Laluan"> </td>
+                </tr>
+
+            </table>
+
+            <br>
+            <input type="Submit" value="Hantar">
+            <input type="reset" value="Set Semula">
+
+
+
+
+        </form>
+        <div class="rectangle"></div>
+        <br>
+
+        <a id="daftar" href="login.html">Log Masuk? Klik Sini!</a>
+
+    </center>
+
+
+</body>
+</html>

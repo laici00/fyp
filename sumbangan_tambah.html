@@ -1,0 +1,173 @@
+
+<html>
+    <head>
+
+        <title>Laman Web Pengurusan Masjid</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+        <script>
+
+            document.getElementById("tarikh").value = "2012-12-12";
+
+            function valid() {
+                if (document.getElementById("bank").value === "") {
+                    alert("Sila masukkan Nombor Akaun Bank!");
+                    return false;
+                } else if (document.getElementById("amaun").value === "0") {
+                    alert("Sila masukkan Amaun!");
+                    return false;
+                } else if (document.getElementById("tarikh").value === "") {
+                    alert("Sila masukkan Tarikh Sumbangan dibuat!");
+                    return false;
+                }
+                return akhir();
+            }
+
+            function akhir() {
+                if (confirm("Adakah anda pasti?")) {
+
+                } else {
+                    confirm("Penambahan Peralatan Dibatalkan!");
+                    return false;
+                }
+            }
+        </script>
+        <style>
+
+
+            h2 {
+                margin-top: 100px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 40px;
+                color: white;
+
+            }
+
+            .rectangle {
+                position: absolute;
+                border-radius: 20px;
+                height: 430px;
+                width: 1000px;
+                background-color: #1260cc;
+                opacity: 0.9;
+
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+
+                margin-top: -340px;
+
+                z-index:-999;
+            }
+            
+            #tab {
+                color: black;
+                background-color: white;
+            }
+            
+            h5 {
+                position : absolute;
+                right : 490px;
+                top : -12px;
+                font-family: 'Roboto', sans-serif;
+                font-size : 20px;
+                color: #406aff;
+                
+                text-shadow: 1px 1px black;
+
+
+            }
+
+            
+        </style>
+
+    </head>
+    <body>
+
+        <ul>
+            <li><a href="index_login_jsp.jsp" title="Kembali ke Laman Utama!" ><span id="left" class="material-symbols-outlined">navigate_before</span></a></li>
+            <li><a id="tab">Buat Sumbangan atas Talian</a></li>
+
+
+           
+
+        </ul>
+
+
+
+        <h4>Sistem Pengurusan Masjid</h4>
+        <h5>PENGGUNA</h5>
+
+
+    <center>
+
+        <h2>Masukkan Maklumat Sumbangan</h2>
+
+        <form method="post" action="sumbangan_berjaya.jsp">
+            <table>
+                <tr>
+                    <td style="text-align: right;"> <label>Masukkan Nombor Akaun Bank: </label> </td>                               
+                    <td> <input type="number" id="bank" name="bank" placeholder="Nombor Akaun Bank" max="1000000000000000"> </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: right;"> <label>Masukkan Amaun untuk Disumbang (RM):</label> </td>
+                    <td> <input id="amaun" name="amaun" type="number" min="0.00" max="10000.00" step="5.00" value="0"/> </td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                </tr>
+
+
+
+                <tr>
+                    <td style="text-align: right;"> <label>Masukkan Tarikh: </label> </td>
+                    <td> <input type="date" id="tarikh" name="tarikh"> </td>
+                </tr>
+
+       
+
+                <script>
+                    
+                    //Menetapkan Tarikh semasa;
+                    
+                    const date = new Date();
+                    const dateInput = document.getElementById('tarikh');
+                    dateInput.value = date.toISOString().slice(0, 10);
+                    
+                </script>
+
+
+
+
+            </table>
+
+            <br>
+            <input type="Submit" value="Hantar" onclick="return valid();">
+            <input type="reset" value="Set Semula">
+
+
+
+
+        </form>
+        <div class="rectangle"></div>
+        <br>
+
+        <a id="daftar" href="sumbangan_papar.jsp">Semak Sumbangan dibuat? Klik Sini!</a>
+
+        <style>
+            #daftar {
+                margin-left: -215px;
+            }
+        </style>
+
+    </center>
+
+</body>
+</html>

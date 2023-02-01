@@ -1,0 +1,188 @@
+
+<html>
+    <head>
+
+        <title>Laman Web Pengurusan Masjid</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+        <script>
+            function valid() {
+                if (confirm("Adakah Anda Pasti?")) {
+
+                } else {
+                    return false;
+                }
+            }
+
+
+        </script>
+        <style>
+
+
+            #daftar {
+
+                border-radius : 30px;
+
+                color: white;
+                float: right;
+                margin : 10px 23px 0px 0px;
+                position: absolute;
+                right : 0px;
+
+                font-family: 'Roboto', sans-serif;
+                font-size : 20px;
+                text-decoration: none;
+
+                padding: 14px 16px;
+
+                transition: border 0.2s, background-color 0.2s, color 0.2s;
+
+            }
+
+            #daftar:hover {
+
+                border-radius : 30px;
+                padding: 14px 16px;
+
+                background-color: white;
+                color: black;
+
+
+            }
+
+            h3 {
+                font-family: 'Roboto', sans-serif;
+                margin-left: 80px;
+                font-size: 55px;
+                display:flex;
+                margin-top: 0px;
+
+            }
+
+            h4 {
+                position : absolute;
+                left : 580px;
+                top : -36px;
+                font-family: 'Roboto', sans-serif;
+                font-size : 40px;
+
+            }
+
+            h5 {
+                position : absolute;
+                right : 532px;
+                top : -12px;
+                font-family: 'Roboto', sans-serif;
+                font-size : 20px;
+                color: gold;
+
+                text-shadow: 2px 2px black;
+            }
+
+            #txt {
+                color: white;
+                margin-left: 85px;
+                margin-top: -60px;
+                
+                text-shadow: 3px 3px black;
+            }
+
+            #date, #txt{
+                color: #c6e5ff;
+            }
+            
+            
+
+        </style>
+
+    </head>
+    <body>
+
+        <a id="daftar" href="logout.html" onclick="return valid()">Log Keluar</a>
+
+        <style>
+
+            #daftar {
+                color: black;
+            }
+
+            #daftar:hover {
+                color: white;
+                background-color: black;
+            }
+
+            #title {
+                background-color: white;
+                color: black;
+            }
+
+            h1 {
+                color: white;
+                text-shadow: 3px 2px black;
+            }
+
+            #date {
+                
+                text-shadow: 3px 2px black;
+            }
+        </style>
+
+        <ul>
+            <li><a id="title" title="Kembali ke Laman Utama!" >Laman Utama</a></li>
+        </ul>
+
+        <h4>Sistem Pengurusan Masjid</h4>
+        <h5>ADMIN</h5>  
+
+        <h1 style="margin:100px 0px -5px 80px;">Bismillah,</h1>
+        <h1 style="margin:0px 0px -5px 80px;"> Selamat Datang!</h1>
+
+        <h3 id="date"></h3>
+        <script>
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = "Tarikh : " + d + "/" + m + "/" + y;
+        </script>
+
+    <body onload="startTime()">
+
+        <h3 id="txt"></h3>
+
+        <script>
+            function startTime() {
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML = "Masa : " + h + ":" + m + ":" + s;
+                setTimeout(startTime, 1000);
+            }
+
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+
+    </body>
+
+
+    <a id="aktiviti" href="aktiviti_kemaskini.jsp">Kemaskini Aktiviti</a>
+    <a id="peralatan" href="peralatan_papar_admin.jsp">Maklumat Pinjaman Peralatan</a>
+    <a id="sumbangan" href="sumbangan_papar_admin.jsp">Maklumat Sumbangan</a>
+    <a id="aduan" href="aduan_papar_admin.jsp">Maklumat Aduan</a>
+
+</body>
+</html>

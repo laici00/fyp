@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>Laman Web Pengurusan Masjid</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <style>
+            h4 {
+                position : absolute;
+                left : 580px;
+                top : -36px;
+                font-family: 'Roboto', sans-serif;
+                font-size : 40px;
+
+            }
+
+            h2 {
+                margin-top: 100px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 40px;
+                color: white;
+            }
+
+            label {
+                font-family: 'Roboto', sans-serif;
+                font-size: 30px;
+                color: white;
+            }
+
+            input[type=Submit], input[type=reset] {
+                border-radius: 30px;
+                text-align : center;
+                font-size: 25px;
+                font-family: 'Roboto', sans-serif;
+
+                cursor: pointer;
+                background-color: white;
+                padding: 10px 20px;
+                transition : color 0.2s, background-color 0.2s;
+            }
+
+            .rectangle {
+                position: absolute;
+                border-radius: 20px;
+                height: 400px;
+                width: 900px;
+                background-color: #1260cc;
+                opacity: 0.9;
+
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+
+                margin-top: -300px; /* importanttt !!!  */
+
+                z-index:-999;
+            }
+
+            #tab:hover {
+                color: black;
+                background-color: white;
+
+            }
+
+            h5 {
+                position : absolute;
+                right : 490px;
+                top : -12px;
+                font-family: 'Roboto', sans-serif;
+                font-size : 20px;
+                color: #406aff;
+
+                text-shadow: 1px 1px black;
+
+
+            }
+
+
+
+        </style>
+
+
+        <script>
+
+            function valid() {
+                if (document.getElementById("nama").value === "") {
+                    alert("Sila masukkan Peralatan untuk dipinjam!");
+                    return false;
+                } else if (document.getElementById("tarikh").value === "") {
+                    alert("Sila masukkan Tarikh untuk dipinjam!");
+                    return false;
+                }
+                return valid1();
+
+            }
+
+            function valid1() {
+
+                if (confirm("Adakah anda pasti?")) {
+
+                } else {
+                    confirm("Penghapusan Peralatan Dibatalkan!");
+                    return false;
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <ul>
+            <li><a href="peralatan_papar.jsp" title="Kembali ke Laman Utama!" ><span id="left" class="material-symbols-outlined">navigate_before</span></a></li>
+            <li><a id="tab">Pinjaman Peralatan Masjid</a></li>
+        </ul>
+        <h4>Sistem Pengurusan Masjid</h4>
+        <h5>PENGGUNA</h5>
+
+
+
+    <center>
+        <h2>Masukkan Maklumat Pinjaman Peralatan</h2>
+
+        <form method="post" action="peralatan_berjaya.jsp">
+            <table>
+
+                <tr>
+                    <td> <label>Masukkan Peralatan untuk dipinjam: </label> </td>
+                    <td> <select id="nama" name="nama">
+                            <option value=""></option>
+                            <option value="Kipas Angin">Kipas Angin</option>
+                            <option value="Pembesar Suara">Pembesar Suara</option>
+                            <option value="Mikrofon">Mikrofon</option>                            
+                        </select> </td>
+                </tr>
+
+                <tr>
+                    <td> <label>Masukkan Tarikh: </label> </td>
+                    <td> <input type="date" id="tarikh" name="tarikh"> </td>
+                </tr>
+            </table>
+            <br>
+            <input type="Submit" value="Hantar" onclick="return valid();">
+            <input type="reset" value="Set Semula">
+        </form>
+        <div class="rectangle"></div>
+        <br>
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<html>
+    <head>
+        <title>Laman Web Pengurusan Masjid</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+        <script>
+
+            //Arah pengguna untuk log masuk terlebih dahulu sebelum meggunakan modul;
+
+            function login() {
+                alert("Sila Log Masuk atau Daftar terlebih dahulu!");
+            }
+
+        </script>
+
+
+        <style>
+            #daftar {
+
+                border-radius : 30px;
+
+                color: black;
+                float: right;
+                margin : 10px 23px 0px 0px;
+                position: absolute;
+                right : 0px;
+
+                font-family: 'Roboto', sans-serif;
+                font-size : 20px;
+                text-decoration: none;
+
+                padding: 14px 16px;
+
+                transition: border 0.2s, background-color 0.2s, color 0.2s;
+
+            }
+
+            #daftar:hover {
+
+                border-radius : 30px;
+                padding: 14px 16px;
+
+                background-color: black;
+                color: white;
+
+            }
+
+            h4 {
+                position : absolute;
+                left : 580px;
+                top : -36px;
+                font-family: 'Roboto', sans-serif;
+                font-size :  40px;
+
+            }
+
+            h3 {
+                text-shadow: 3px 2px black;
+            }
+
+            h2 {
+                margin-top: -40px;
+            }
+
+            h1 {
+                text-shadow: 3px 2px black;
+            }
+
+            #button:hover {
+                color: white;
+                background-color: black;
+
+            }
+
+            #button {
+                color: black;
+                background-color: white;
+            }
+
+            #title {
+                background-color: white;
+                color: black;
+            }
+            
+            #txt {
+                color: white;
+                margin-left: 85px;
+                margin-top: -60px;
+            }
+            
+            #date, #txt{
+                color: #c6e5ff;
+            }
+         
+        </style>
+
+    </head>
+    <body>
+
+
+        <a id="daftar" href="select.html">Log Masuk / Daftar</a>
+
+
+        <ul>
+            <li><a id="title" title="Kembali ke Laman Utama!" >Laman Utama</a></li>
+        </ul>
+
+        <h4>Sistem Pengurusan Masjid</h4>
+
+        <div id="selamat">
+            <h1 style="margin:100px 0px -5px 80px;">Bismillah,</h1>
+            <h1 style="margin:0px 0px -5px 80px;"> Selamat Datang!</h1>
+        </div>
+        <h3 id="date"></h3>                                                     
+
+        <script>
+            //untuk menunjukkan tarikh
+
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = "Tarikh : " + d + "/" + m + "/" + y;
+
+            var baru = d + "/" + m + "/" + y;
+        </script>
+
+        <body onload="startTime()">
+
+            <h3 id="txt"></h3>
+
+            <script>
+                function startTime() {
+                    const today = new Date();
+                    let h = today.getHours();
+                    let m = today.getMinutes();
+                    let s = today.getSeconds();
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('txt').innerHTML = "Masa : " +  h + ":" + m + ":" + s;
+                    setTimeout(startTime, 1000);
+                }
+
+                function checkTime(i) {
+                    if (i < 10) {
+                        i = "0" + i;
+                    }
+                      // add zero in front of numbers < 10
+                    return i;
+                }
+            </script>
+
+        </body>
+   
+
+
+    <form action="select.html">
+        <h2><button id="button" type="submit" value="Log Masuk" ><span class="material-symbols-outlined">
+login
+</span>
+                Log Masuk</button></h2>
+    </form>
+
+    <a id="aktiviti" href="aktiviti_papar.jsp">Papar Aktiviti Terkini</a>
+    <a id="peralatan" onclick="return login()">Pinjaman Peralatan Masjid</a>
+    <a id="sumbangan" onclick="return login()">Buat Sumbangan atas Talian</a>
+    <a id="aduan" onclick="return login()">Buat Aduan</a>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+<html>
+    <head>
+
+        <title>Laman Web Pengurusan Masjid</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <script>
+            document.getElementById("date").innerHTML = Date();
+
+            function valid() {
+
+                if (document.getElementById("nama").value === "") {
+                    alert("Sila masukkan Nama!");
+                    return false;
+                } else if (document.getElementById("kataLaluan").value === "") {
+                    alert("Sila masukkan Kata Laluan!");
+                    return false;
+
+                }
+
+            }
+
+        </script>
+        <style>
+
+            #tab {
+                background-color: black;
+                color: white;
+            }
+            
+            .rectangle {
+                margin-top: -350px;
+                background-color: #1260cc;
+                
+                opacity: 0.8;
+                
+            }
+            
+          
+        </style>
+
+
+    </head>
+    <body>
+
+        <ul>
+            <li><a href="#" onclick="history.back()"  ><span class="material-symbols-outlined">navigate_before</span></a></li>
+            
+        </ul>
+
+        <h4>Sistem Pengurusan Masjid</h4>
+
+    <center>
+
+        <h2>Masukkan Maklumat Akaun</h2>
+
+        <form method="post" action="admin_valid.jsp">
+            <table>
+                <tr>
+                    <td style="text-align: right;"> <label>Masukkan Nama: </label> </td>
+                    <td> <input type="text" id="nama" name="nama" placeholder="Nama"> </td>
+                </tr>
+
+                <tr>
+                    <td> <label>Masukkan Kata Laluan: </label> </td>
+                    <td> <input type="password" id="kataLaluan" name="kataLaluan" placeholder="Kata Laluan"> </td>
+                </tr>
+
+            </table>
+
+            <br>
+            <input type="submit" value="Log Masuk" onclick="return valid();" style="margin-top: 30px;" />
+            <input type="reset" value="Set Semula">
+
+        </form>
+        <div class="rectangle"></div>
+        <br>
+
+        
+    </center>
+
+</body>
+</html>

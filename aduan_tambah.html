@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title>Laman Web Pengurusan Masjid</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <style>
+            .rectangle {
+                position: absolute;
+                border-radius: 20px;
+                height: 500px;
+                width: 800px;
+                background-color: #1260cc;
+
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+
+                margin-top: -400px;
+
+                z-index:-999;
+
+
+            }
+
+            #daftar {
+                border: 1px solid black;
+                border-radius: 30px;
+                background-color: white;
+                text-decoration: none;
+
+                padding: 12px 25px;
+                font-size : 24px;
+                font-family: 'Roboto', sans-serif;
+
+                position : absolute;
+                transition: background-color 0.2s, color 0.2s;
+
+                margin-left : -95px;
+                color: black;
+
+            }
+
+            #daftar:hover {
+                color: white;
+                background-color: black;
+
+            }
+
+            .material-symbols-outlined {
+
+                font-size:25px;
+                font-variation-settings:
+                    'FILL' 0,
+                    'wght' 700,
+                    'GRAD' 0,
+                    'opsz' 48
+
+
+            }
+
+
+
+            #tab:hover {
+                background-color: white;
+                color: black;
+            }
+
+            #butiran {
+                height: 90px;
+            }
+
+            h5 {
+                position : absolute;
+                right : 490px;
+                top : -12px;
+                font-family: 'Roboto', sans-serif;
+                font-size : 20px;
+                color: #406aff;
+                
+                text-shadow: 1px 1px black;
+
+
+            }
+        </style>
+        <script>
+            function valid() {
+
+                if (document.getElementById("nama").value === "") {
+                    alert("Sila masukkan Nama Aduan!");
+                    return false;
+                } else if (document.getElementById("butiran").value === "") {
+                    alert("Sila masukkan Butiran Aduan!");
+                    return false;
+                } else if (document.getElementById("tarikh").value === "") {
+                    alert("Sila masukkan Tarikh!");
+                    return false;
+                }
+                return akhir();
+
+
+            }
+
+            function akhir() {
+
+
+                if (confirm("Adakah anda pasti?")) {
+
+                } else {
+                    confirm("Penambahan Peralatan Dibatalkan!");
+                    return false;
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <ul>
+            <li><a href="index_login_jsp.jsp" title="Kembali ke Laman Utama!" ><span id="left" class="material-symbols-outlined">navigate_before</span></a></li>
+            <li><a id="tab">Buat Aduan</a></li>
+        </ul>
+        <h4>Sistem Pengurusan Masjid</h4>
+
+        <h5>PENGGUNA</h5>
+    <center>
+        <h2>Masukkan Maklumat Aduan</h2>
+        <form method="post" action="aduan_berjaya.jsp">
+            <table>
+                <tr>
+                    <td> <label>Masukkan Subjek Aduan: </label> </td>
+                    <td> <input type="text" id="nama" name="nama" placeholder="Nama"> </td>
+                </tr>
+
+                <tr>
+                    <td> <label>Masukkan Butiran Aduan: </label> </td>
+                    <td> <input type="text" id="butiran" name="butiran" placeholder="Butiran"> </td>
+                </tr>
+                <tr>
+                    <td> <br> </td>
+                </tr>
+
+                <tr>
+                    <td> <label>Masukkan Tarikh: </label> </td>
+                    <td> <input type="date" id="tarikh" name="tarikh"> </td>
+                </tr>
+
+            </table>
+
+            <br>
+            <input type="Submit" value="Hantar" onclick="return valid();">
+            <input type="reset" value="Set Semula">
+
+        </form>
+        <div class="rectangle"></div>
+        <br>
+
+
+        <a id="daftar" href="aduan_papar.jsp">Semak Aduan</a>
+
+    </center>
+
+</body>
+</html>
