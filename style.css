@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+@media print {
+    #button1, #button {
+        visibility: hidden;
+    }
+
+    h1 {
+        text-shadow: none;
+    }
+
+
+}
+
+::selection{
+    background-color: black;
+    color: white;
+}
+
+body {
+    background-image: url(images/mosque2.jpg);
+    background-size: 100%;
+}
+
+#home {
+
+    color: white;
+    float: right;
+    margin : 12px 23px 0px 0px;
+    position: absolute;
+    right : 0px;
+
+    border: solid white;
+    border-radius : 30px;
+    padding: 10px;
+
+    transition: border 0.2s, background-color 0.2s, color 0.2s;
+
+}
+
+
+
+#home:hover {
+
+    border-radius : 30px;
+    padding: 10px;
+
+    background-color: white;
+    color: black;
+
+
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: white;
+
+    border-radius: 40px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    background-color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+    transition: background-color 0.2s, color 0.2s;
+
+    border-radius: 30px;
+
+}
+
+
+li a:hover {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 70px;
+    font-size: 100px;
+    display: flex;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 80px;
+    font-size: 55px;
+    display:flex;
+    margin-top: 0px;
+
+}
+
+
+#button {
+
+
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    padding: 10px 38px;
+    font-size: 25px;
+    border-radius: 30px;
+
+
+    cursor: pointer;
+
+    margin: 0px 0px -5000px 80px;
+
+    transition : background-color 0.2s, color 0.2s, border 0.2s;
+
+}
+
+#button:hover {
+    border: 1px solid black;
+}
+
+
+
+
+.material-symbols-outlined {
+
+    font-size:25px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 700,
+        'GRAD' 0,
+        'opsz' 48
+
+
+}
+
+#selamat, #date {
+    color: white;
+}
+
+.material-symbols-outlined:hover {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 700,
+        'GRAD' 0,
+        'opsz' 48
+
+
+}
+
+h4 {
+    position : absolute;
+    left : 580px;
+    top : -36px;
+    font-family: 'Roboto', sans-serif;
+    font-size : 40px;
+    color: black;
+}
+
+h2 {
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: white;
+
+}
+
+#nama, #kataLaluan, #butiran {
+    border-radius: 30px;
+
+    text-align : center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+
+
+
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: white;
+
+
+}
+
+input[type=Submit], input[type=reset] {
+    border-radius: 30px;
+
+    text-align : center;
+    font-size: 25px;
+
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+
+    background-color: white;
+
+    padding: 10px 20px;
+
+    transition : color 0.2s, background-color 0.2s;
+
+}
+
+input[type=Submit]:hover, input[type=reset]:hover {
+    color: white;
+    background-color: black;
+}
+
+.rectangle {
+    position: absolute;
+    border-radius: 20px;
+    height: 400px;
+    width: 750px;
+    background-color: black;
+
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: -282px;
+
+    z-index:-999;
+
+
+}
+
+#daftar {
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+    text-decoration: none;
+
+    padding: 8px 20px;
+    font-size : 24px;
+    font-family: 'Roboto', sans-serif;
+
+    position : absolute;
+    transition: background-color 0.2s, color 0.2s;
+
+    margin-left : -148px;
+    color: black;
+
+}
+
+#daftar:hover {
+    color: white;
+    background-color: black;
+
+}
+
+#aktiviti {
+    top : 140px;
+    right : 370px;
+
+    background-image : url(images/aktiviti.jpg);
+    background-size: 280px, 260px;
+    background-position: 5% 50%;
+    color : white;
+}
+
+#peralatan {
+    top : 140px;
+    right : 70px;
+
+    background-image : url(images/pinjaman.png);
+    background-size: 300px, 200px;
+    background-position: 50% 80%;
+    color : white;
+}
+
+#aduan {
+    top : 380px;
+    right : 370px;
+
+    background-image : url(images/aduan.jpg);
+    background-size: 400px, 300px;
+    background-position: 40% 0%;
+    color : white;
+}
+
+#sumbangan {
+    top : 380px;
+    right : 70px;
+
+    background-image : url(images/sumbangan.png);
+    background-size: 400px, 400px;
+    background-position: 50% 50%;
+    color : white;
+}
+
+
+#aktiviti:hover, #peralatan:hover, #aduan:hover, #sumbangan:hover {
+    transform: scale(1.2);
+    //background-image: url();
+
+    color: #bddffc;
+
+
+    //text-shadow: none;
+    z-index:1;
+}
+
+#aktiviti, #peralatan, #aduan, #sumbangan {
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    padding: 10px;
+
+    width: 260px;
+    height: 200px;
+
+    display: flex;
+    text-decoration: none;
+
+    margin-top: 10px;
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size : 40px;
+    position : absolute;
+
+    transition: transform 0.2s, color 0.2s, text-shadow 0.2s, background-color 0.2s;
+
+    text-shadow: 4px 4px black;
+
+    cursor : pointer;
+
+
+
+}
+
+#bank, #amaun, #tarikh {
+    border-radius: 30px;
+
+    text-align : center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#tarikh {
+    width: 300px;
+}
+
+#admin, #user  {
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    padding: 10px;
+
+    width: 300px;
+    height: 230px;
+
+    display: flex;
+    text-decoration: none;
+
+    margin-top: 10px;
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size : 40px;
+    position : absolute;
+
+    transition: transform 0.2s, color 0.2s, text-shadow 0.2s, background-color 0.2s;
+
+    text-shadow: 4px 4px black;
+
+    cursor : pointer;
+
+
+
+}
+
+#admin {
+    top : 140px;
+    left : 30%;
+
+
+    background-size: 300px, 280px;
+    background-position: 5% 50%;
+    color : white;
+}
+
+#user {
+    top : 140px;
+    right : 30%;
+
+
+    background-size: 300px, 200px;
+    background-position: 50% 80%;
+    color : white;
+}
+
+#emel, #nama, #kataLaluan {
+    border-radius: 30px;
+
+    text-align : center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#alat, #tarikh {
+    border-radius: 30px;
+
+    text-align : center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#alat {
+    width: 365px;
+}
+
+#tarikh {
+    width: 360px;
+}
+
+#user {
+    background-image : url(images/user.png);
+    background-size: 400px, 300px;
+    background-position: 40% 0%;
+
+}
+
+#admin {
+    background-image : url(images/admin.png);
+    background-size: 400px, 300px;
+    background-position: 40% 0%;
+
+}
+
+
+#admin:hover, #user:hover {
+    transform: scale(1.2);
+
+    color: #bddffc;
+
+}
+
+#admin:hover {
+
+}
+
+#user:hover {
+
+    z-index:1;
+
+}
+
